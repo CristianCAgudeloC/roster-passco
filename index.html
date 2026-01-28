@@ -262,6 +262,7 @@
       object-fit: cover;
       border: 4px solid white;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      background: linear-gradient(135deg, var(--primary-orange) 0%, #ffaa00 100%);
     }
 
     .influencer-name {
@@ -465,6 +466,7 @@
       border: 6px solid white;
       margin-bottom: 25px;
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(135deg, var(--primary-orange) 0%, #ffaa00 100%);
     }
 
     .modal-name {
@@ -523,6 +525,160 @@
       font-weight: 800;
       font-size: 1.3em;
       color: var(--text-dark);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: white;
+      padding: 60px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      margin: 50px 0 30px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-orange) 0%, #ffaa00 100%);
+    }
+
+    .cta-icon {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 30px;
+      background: linear-gradient(135deg, var(--primary-orange) 0%, #ffaa00 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(255, 136, 0, 0.3);
+    }
+
+    .cta-icon i {
+      font-size: 4em;
+      color: white;
+    }
+
+    .cta-title {
+      font-size: 2.5em;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+
+    .cta-subtitle {
+      font-size: 1.2em;
+      color: var(--text-light);
+      margin-bottom: 40px;
+      line-height: 1.6;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 20px 30px;
+      background: var(--light-gray);
+      border-radius: 15px;
+      transition: all 0.3s;
+      text-decoration: none;
+      color: var(--text-dark);
+      border: 2px solid transparent;
+    }
+
+    .contact-item:hover {
+      background: white;
+      border-color: var(--primary-orange);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 20px rgba(255, 136, 0, 0.2);
+    }
+
+    .contact-item i {
+      font-size: 2em;
+      color: var(--primary-orange);
+    }
+
+    .contact-info {
+      text-align: left;
+    }
+
+    .contact-label {
+      font-size: 0.8em;
+      color: var(--text-light);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .contact-value {
+      font-size: 1.1em;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark-bg);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      margin-top: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-orange) 0%, #ffaa00 100%);
+    }
+
+    .footer-logo {
+      font-size: 2em;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .footer-logo span {
+      color: var(--primary-orange);
+    }
+
+    .footer-tagline {
+      color: #999;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .footer-text {
+      color: #666;
+      font-size: 0.95em;
     }
 
     /* Loading */
@@ -599,6 +755,23 @@
 
       .modal-name {
         font-size: 1.8em;
+      }
+
+      .cta-section {
+        padding: 40px 25px;
+      }
+
+      .cta-title {
+        font-size: 1.8em;
+      }
+
+      .cta-contact {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .contact-item {
+        justify-content: center;
       }
     }
 
@@ -696,6 +869,50 @@
         <p>Cargando talentos...</p>
       </div>
     </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <div class="cta-icon">
+        <i class="fas fa-question"></i>
+      </div>
+      <h2 class="cta-title">¿No encuentras el talento que buscas?</h2>
+      <p class="cta-subtitle">Avísanos, haremos lo posible por encontrar la persona necesaria para tu proyecto</p>
+
+      <div class="cta-contact">
+        <a href="mailto:apulido@passyco.com" class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div class="contact-info">
+            <div class="contact-label">Email</div>
+            <div class="contact-value">apulido@passyco.com</div>
+          </div>
+        </a>
+
+        <a href="tel:+573118055430" class="contact-item">
+          <i class="fas fa-phone"></i>
+          <div class="contact-info">
+            <div class="contact-label">Teléfono</div>
+            <div class="contact-value">(+57) 311-805 54 30</div>
+          </div>
+        </a>
+
+        <div class="contact-item">
+          <i class="fas fa-user"></i>
+          <div class="contact-info">
+            <div class="contact-label">Contacto</div>
+            <div class="contact-value">Ángel Pulido</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-logo">PASS<span>&</span>CO <span style="font-size: 0.5em; font-weight: 400;">S.A.S.</span>
+      </div>
+      <p class="footer-tagline">Hacemos que pasen cosas.</p>
+      <p class="footer-text">Conectamos talentos, marcas, campañas y eventos. Mercadeo digital y gestión de
+        influenciadores.</p>
+    </div>
   </div>
 
   <!-- Modal -->
@@ -715,10 +932,14 @@
   </div>
 
   <script>
-    const API_URL = 'https://script.google.com/macros/s/AKfycbx7dc0b3xHyW2ZcJ3JITmC6v3DB8D6ydTXkbyuRMmawNtSBPoDFm2ZbMlXeONJ2fKhI/exec';
+    // ACTUALIZA ESTA URL CON TU NUEVA IMPLEMENTACIÓN
+    const API_URL = 'https://script.google.com/macros/s/AKfycbzHqTRuCBwwQDbIKqOpe63vsb1njkcaE7MLvw-MqegJNvCNX3dg95WPfmC8eWg3Pa4j/exec';
 
     let allInfluencers = [];
     let activeTags = new Set();
+
+    // SVG Placeholder personalizado con iniciales P&C
+    const DEFAULT_PHOTO = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180"%3E%3Ccircle cx="90" cy="90" r="90" fill="%23FF8800"/%3E%3Ctext x="90" y="110" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle"%3EP%26C%3C/text%3E%3C/svg%3E';
 
     function formatNumber(num) {
       if (!num || num === 0) return '0';
@@ -818,7 +1039,7 @@
       return socials
         .filter(s => s.value && s.value > 0)
         .map(s => {
-          if (s.link) {
+          if (s.link && s.link !== '' && s.link !== 'No') {
             return `
               <a href="${s.link}" target="_blank" rel="noopener noreferrer" class="${itemClass}" onclick="event.stopPropagation()">
                 <i class="fab ${s.icon}"></i>
@@ -841,13 +1062,15 @@
         ? influencer.tags.filter(t => t && t.trim()).map(tag => `<span class="tag">${tag}</span>`).join('')
         : '';
 
+      const photoUrl = (influencer.foto_url && influencer.foto_url !== '') ? influencer.foto_url : DEFAULT_PHOTO;
+
       return `
         <div class="influencer-card" onclick="openModal('${influencer.nombre.replace(/'/g, "\\'")}')">
           <div class="card-header">
-            <img src="${influencer.foto_url || 'https://via.placeholder.com/90'}"
+            <img src="${photoUrl}"
                  alt="${influencer.nombre}"
                  class="influencer-photo"
-                 onerror="this.src='https://via.placeholder.com/90'">
+                 onerror="this.src='${DEFAULT_PHOTO}'">
             <h3 class="influencer-name">${influencer.nombre}</h3>
           </div>
           <div class="card-body">
@@ -905,7 +1128,10 @@
       const influencer = allInfluencers.find(inf => inf.nombre === nombre);
       if (!influencer) return;
 
-      document.getElementById('modalPhoto').src = influencer.foto_url || 'https://via.placeholder.com/180';
+      const photoUrl = (influencer.foto_url && influencer.foto_url !== '') ? influencer.foto_url : DEFAULT_PHOTO;
+
+      document.getElementById('modalPhoto').src = photoUrl;
+      document.getElementById('modalPhoto').onerror = function () { this.src = DEFAULT_PHOTO; };
       document.getElementById('modalName').textContent = influencer.nombre;
       document.getElementById('modalDescription').textContent = influencer.descripcion || '';
 
