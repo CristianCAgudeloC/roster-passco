@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roster de Talentos - Pass&Co</title>
 
-  <!-- Font Awesome para iconos -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Google Fonts -->
@@ -20,7 +20,7 @@
     }
 
     :root {
-      --primary-red: #C1272D;
+      --primary-orange: #FF8800;
       --dark-bg: #1a1a1a;
       --light-gray: #f5f5f5;
       --text-dark: #2c2c2c;
@@ -39,7 +39,7 @@
       margin: 0 auto;
     }
 
-    /* Header con estilo Pass&Co */
+    /* Header */
     .header {
       background: linear-gradient(135deg, var(--dark-bg) 0%, #2d2d2d 100%);
       padding: 40px;
@@ -57,7 +57,7 @@
       left: 0;
       width: 100%;
       height: 5px;
-      background: linear-gradient(90deg, var(--primary-red) 0%, #e03a3e 100%);
+      background: linear-gradient(90deg, var(--primary-orange) 0%, #ffaa00 100%);
     }
 
     .header-content {
@@ -78,7 +78,7 @@
     }
 
     .header-left h1 span {
-      color: var(--primary-red);
+      color: var(--primary-orange);
     }
 
     .header-left p {
@@ -97,10 +97,10 @@
     }
 
     .logo-container span {
-      color: var(--primary-red);
+      color: var(--primary-orange);
     }
 
-    /* Stats mejorados */
+    /* Stats */
     .stats-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -114,13 +114,13 @@
       border-radius: 15px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
       text-align: center;
-      border-left: 4px solid var(--primary-red);
+      border-left: 4px solid var(--primary-orange);
     }
 
     .stat-number {
       font-size: 3em;
       font-weight: 800;
-      color: var(--primary-red);
+      color: var(--primary-orange);
       line-height: 1;
     }
 
@@ -133,7 +133,7 @@
       letter-spacing: 1px;
     }
 
-    /* Controles de búsqueda mejorados */
+    /* Controles */
     .controls {
       background: white;
       padding: 30px;
@@ -160,8 +160,8 @@
 
     .search-box input:focus {
       outline: none;
-      border-color: var(--primary-red);
-      box-shadow: 0 0 0 4px rgba(193, 39, 45, 0.1);
+      border-color: var(--primary-orange);
+      box-shadow: 0 0 0 4px rgba(255, 136, 0, 0.1);
     }
 
     .search-box i {
@@ -169,7 +169,7 @@
       left: 20px;
       top: 50%;
       transform: translateY(-50%);
-      color: var(--primary-red);
+      color: var(--primary-orange);
       font-size: 1.2em;
     }
 
@@ -207,13 +207,13 @@
     }
 
     .filter-tag.active {
-      background: var(--primary-red);
-      border-color: var(--primary-red);
+      background: var(--primary-orange);
+      border-color: var(--primary-orange);
       color: white;
-      box-shadow: 0 4px 15px rgba(193, 39, 45, 0.3);
+      box-shadow: 0 4px 15px rgba(255, 136, 0, 0.3);
     }
 
-    /* Grid de influencers estilo Pass&Co */
+    /* Grid */
     .influencers-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
@@ -221,7 +221,7 @@
       margin-bottom: 30px;
     }
 
-    /* Card estilo PDF de Pass&Co */
+    /* Cards */
     .influencer-card {
       background: white;
       border-radius: 20px;
@@ -239,12 +239,12 @@
       left: 0;
       width: 100%;
       height: 4px;
-      background: linear-gradient(90deg, var(--primary-red) 0%, #e03a3e 100%);
+      background: linear-gradient(90deg, var(--primary-orange) 0%, #ffaa00 100%);
     }
 
     .influencer-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 50px rgba(193, 39, 45, 0.2);
+      box-shadow: 0 20px 50px rgba(255, 136, 0, 0.2);
     }
 
     .card-header {
@@ -298,8 +298,8 @@
 
     .tag {
       padding: 6px 14px;
-      background: rgba(193, 39, 45, 0.08);
-      color: var(--primary-red);
+      background: rgba(255, 136, 0, 0.08);
+      color: var(--primary-orange);
       border-radius: 20px;
       font-size: 0.8em;
       font-weight: 700;
@@ -315,6 +315,7 @@
       border-top: 2px solid #f0f0f0;
     }
 
+    /* Links clickeables en redes sociales */
     .social-item {
       display: flex;
       align-items: center;
@@ -323,11 +324,15 @@
       background: #fafafa;
       border-radius: 10px;
       transition: all 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
     }
 
     .social-item:hover {
       background: var(--light-gray);
       transform: translateX(3px);
+      box-shadow: 0 3px 10px rgba(255, 136, 0, 0.15);
     }
 
     .social-item i {
@@ -342,7 +347,7 @@
       font-size: 1em;
     }
 
-    /* Colores de redes sociales */
+    /* Colores redes sociales */
     .fa-instagram {
       color: #E4405F;
     }
@@ -367,7 +372,15 @@
       color: #9146FF;
     }
 
-    /* Modal mejorado */
+    .fa-spotify {
+      color: #1DB954;
+    }
+
+    .fa-kick {
+      color: #53fc18;
+    }
+
+    /* Modal */
     .modal {
       display: none;
       position: fixed;
@@ -419,7 +432,7 @@
       left: 0;
       width: 100%;
       height: 4px;
-      background: linear-gradient(90deg, var(--primary-red) 0%, #e03a3e 100%);
+      background: linear-gradient(90deg, var(--primary-orange) 0%, #ffaa00 100%);
     }
 
     .close-modal {
@@ -440,7 +453,7 @@
     }
 
     .close-modal:hover {
-      background: var(--primary-red);
+      background: var(--primary-orange);
       transform: rotate(90deg);
     }
 
@@ -490,13 +503,16 @@
       border-radius: 15px;
       transition: all 0.3s;
       border: 2px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
     }
 
     .modal-social-item:hover {
       background: white;
-      border-color: var(--primary-red);
+      border-color: var(--primary-orange);
       transform: translateY(-3px);
-      box-shadow: 0 5px 20px rgba(193, 39, 45, 0.15);
+      box-shadow: 0 5px 20px rgba(255, 136, 0, 0.15);
     }
 
     .modal-social-item i {
@@ -509,7 +525,7 @@
       color: var(--text-dark);
     }
 
-    /* Loading mejorado */
+    /* Loading */
     .loading {
       text-align: center;
       padding: 80px;
@@ -518,7 +534,7 @@
 
     .loading i {
       font-size: 3em;
-      color: var(--primary-red);
+      color: var(--primary-orange);
       margin-bottom: 20px;
     }
 
@@ -537,7 +553,7 @@
       font-size: 5em;
       margin-bottom: 25px;
       opacity: 0.3;
-      color: var(--primary-red);
+      color: var(--primary-orange);
     }
 
     .empty-state h3 {
@@ -586,7 +602,7 @@
       }
     }
 
-    /* Animaciones adicionales */
+    /* Animaciones */
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -631,7 +647,7 @@
 
 <body>
   <div class="container">
-    <!-- Header estilo Pass&Co -->
+    <!-- Header -->
     <div class="header">
       <div class="header-content">
         <div class="header-left">
@@ -660,7 +676,7 @@
       </div>
     </div>
 
-    <!-- Controles de búsqueda -->
+    <!-- Controles -->
     <div class="controls">
       <div class="search-box">
         <i class="fas fa-search"></i>
@@ -670,12 +686,10 @@
       <div class="filters-title">
         <i class="fas fa-filter"></i> Filtrar por categoría
       </div>
-      <div class="filters" id="filtersContainer">
-        <!-- Los filtros se generarán dinámicamente -->
-      </div>
+      <div class="filters" id="filtersContainer"></div>
     </div>
 
-    <!-- Grid de influencers -->
+    <!-- Grid -->
     <div id="influencersContainer">
       <div class="loading">
         <i class="fas fa-spinner fa-spin"></i>
@@ -701,13 +715,11 @@
   </div>
 
   <script>
-    // ⚠️ IMPORTANTE: Reemplaza con tu URL de Apps Script
-    const API_URL = 'https://script.google.com/macros/s/AKfycbwZJLjjFBELs--xWLQ-2j5SncuuXFS2Jt6k7qX3VWOpiismBnAL08hneThDwio-zzC0_g/exec';
+    const API_URL = 'https://script.google.com/macros/s/AKfycbwyhDvWr_uzDJ_ioTHFPhbthhMsV8zvCvzdtS474Rq0-Gx4jacU2YschOCHY5yobKiapw/exec';
 
     let allInfluencers = [];
     let activeTags = new Set();
 
-    // Formatear números
     function formatNumber(num) {
       if (!num || num === 0) return '0';
       if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
@@ -715,7 +727,6 @@
       return num.toString();
     }
 
-    // Calcular alcance total
     function calculateTotalReach(influencers) {
       let total = 0;
       influencers.forEach(inf => {
@@ -725,11 +736,12 @@
         total += (inf.youtube || 0);
         total += (inf.twitter || 0);
         total += (inf.twitch || 0);
+        total += (inf.kick || 0);
+        total += (inf.spotify || 0);
       });
       return total;
     }
 
-    // Obtener todos los tags únicos
     function getAllTags(influencers) {
       const tagsSet = new Set();
       influencers.forEach(inf => {
@@ -744,7 +756,6 @@
       return Array.from(tagsSet).sort();
     }
 
-    // Renderizar filtros
     function renderFilters(tags) {
       const container = document.getElementById('filtersContainer');
       container.innerHTML = `
@@ -766,7 +777,6 @@
       document.getElementById('categoriesCount').textContent = tags.length;
     }
 
-    // Toggle filtro
     function toggleFilter(tag) {
       if (tag === 'all') {
         activeTags.clear();
@@ -790,30 +800,42 @@
       filterInfluencers();
     }
 
-    // Renderizar redes sociales
+    // Renderizar redes sociales con LINKS (incluye Kick y Spotify)
     function renderSocial(influencer, isModal = false) {
       const socials = [
-        { name: 'instagram', icon: 'fa-instagram', value: influencer.instagram },
-        { name: 'tiktok', icon: 'fa-tiktok', value: influencer.tiktok },
-        { name: 'facebook', icon: 'fa-facebook', value: influencer.facebook },
-        { name: 'youtube', icon: 'fa-youtube', value: influencer.youtube },
-        { name: 'twitter', icon: 'fa-twitter', value: influencer.twitter },
-        { name: 'twitch', icon: 'fa-twitch', value: influencer.twitch }
+        { name: 'instagram', icon: 'fa-instagram', value: influencer.instagram, link: influencer.instagram_link },
+        { name: 'tiktok', icon: 'fa-tiktok', value: influencer.tiktok, link: influencer.tiktok_link },
+        { name: 'facebook', icon: 'fa-facebook', value: influencer.facebook, link: influencer.facebook_link },
+        { name: 'youtube', icon: 'fa-youtube', value: influencer.youtube, link: influencer.youtube_link },
+        { name: 'twitch', icon: 'fa-twitch', value: influencer.twitch, link: influencer.twitch_link },
+        { name: 'kick', icon: 'fa-kick', value: influencer.kick, link: influencer.kick_link },
+        { name: 'twitter', icon: 'fa-twitter', value: influencer.twitter, link: influencer.twitter_link },
+        { name: 'spotify', icon: 'fa-spotify', value: influencer.spotify, link: influencer.spotify_link }
       ];
 
       const itemClass = isModal ? 'modal-social-item' : 'social-item';
 
       return socials
         .filter(s => s.value && s.value > 0)
-        .map(s => `
-          <div class="${itemClass}">
-            <i class="fab ${s.icon}"></i>
-            <span class="count">${formatNumber(s.value)}</span>
-          </div>
-        `).join('');
+        .map(s => {
+          if (s.link) {
+            return `
+              <a href="${s.link}" target="_blank" rel="noopener noreferrer" class="${itemClass}" onclick="event.stopPropagation()">
+                <i class="fab ${s.icon}"></i>
+                <span class="count">${formatNumber(s.value)}</span>
+              </a>
+            `;
+          } else {
+            return `
+              <div class="${itemClass}">
+                <i class="fab ${s.icon}"></i>
+                <span class="count">${formatNumber(s.value)}</span>
+              </div>
+            `;
+          }
+        }).join('');
     }
 
-    // Renderizar card
     function renderInfluencerCard(influencer) {
       const tags = influencer.tags && Array.isArray(influencer.tags)
         ? influencer.tags.filter(t => t && t.trim()).map(tag => `<span class="tag">${tag}</span>`).join('')
@@ -839,7 +861,6 @@
       `;
     }
 
-    // Renderizar grid
     function renderInfluencers(influencers) {
       const container = document.getElementById('influencersContainer');
       document.getElementById('influencerCount').textContent = influencers.length;
@@ -863,7 +884,6 @@
       `;
     }
 
-    // Filtrar influencers
     function filterInfluencers() {
       const searchTerm = document.getElementById('searchInput').value.toLowerCase();
 
@@ -881,7 +901,6 @@
       renderInfluencers(filtered);
     }
 
-    // Abrir modal
     function openModal(nombre) {
       const influencer = allInfluencers.find(inf => inf.nombre === nombre);
       if (!influencer) return;
@@ -901,7 +920,6 @@
       document.body.style.overflow = 'hidden';
     }
 
-    // Cerrar modal
     function closeModal() {
       document.getElementById('influencerModal').style.display = 'none';
       document.body.style.overflow = 'auto';
@@ -914,10 +932,8 @@
       }
     }
 
-    // Búsqueda en tiempo real
     document.getElementById('searchInput').addEventListener('input', filterInfluencers);
 
-    // Cargar datos
     async function loadInfluencers() {
       try {
         const response = await fetch(API_URL);
